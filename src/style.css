@@ -1,0 +1,106 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body, html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.home{
+    position: relative; 
+}
+.img-home-principal{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* overflow: hidden; */
+}
+
+.img-home-principal img{
+    transform: translateY(100px); /* Desloca a imagem para cima metade de sua própria altura */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.texto-sobreposto{
+    font-size: 30px;
+    position: absolute;
+    top: 43%; /* Posiciona o texto no meio vertical da div */
+    left: 30%; /* Posiciona o texto no meio horizontal da div */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; /* Cor do texto */
+}
+
+.home ul {
+    display: flex;
+    position: absolute;
+    top: 57%;
+    left: 29.5%;
+    transform: translate(-50%, -50%);
+  }
+
+.home ul li{
+    list-style: none;
+}
+
+.home ul li a{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 25%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.home ul li a .icon{
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+.home ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+
+.home ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+.home ul li a:hover:before {
+    top: 0;
+  }
+  
+.home ul li:nth-child(1) a:before{
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+  }
+  
+.home ul li:nth-child(2) a:before{
+    background: #25D366;
+  }
+
